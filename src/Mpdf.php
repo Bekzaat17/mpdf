@@ -20674,7 +20674,7 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 							}
 						}
 					}
-					$extH = max($extH, $colH[$m]); // mPDF 6
+					$extH = max($extH, $colH[$m] ?? $extH); // mPDF 6
 				}
 				$newhr[$i] = $extH - array_sum($newhr);
 				for ($k = $top; $k <= $bottom; $k++) {
